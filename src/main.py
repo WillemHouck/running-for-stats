@@ -14,10 +14,8 @@ runs_plotdata = utils.add_weeks_without_runs(runs)
 app = Dash(__name__)
 app.layout = html.Div([
     html.H1(children='Runnalytics', style={'textAlign': 'center'}),
-    dcc.Graph(figure=px.bar(runs_plotdata,
-                            x='year_week',
-                            y='distance'), id='graph-content'),
-])
+    dcc.Graph(figure=px.bar(runs_plotdata, x='year_week', y='distance'),id='graph-content'),
+              ])
 
 
 @callback(
