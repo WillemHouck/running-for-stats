@@ -24,9 +24,3 @@ app.layout = html.Div([
 def update_graph():
     filtered_data = runs_plotdata
     return px.bar(filtered_data, x='year_week', y='distance')
-
-
-if __name__ == '__main__':
-
-    # run application
-    app.run(debug=True)
